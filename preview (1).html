@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Nicole,quer namorar comigo?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+      background-color: #ffe6e6;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 20px;
+      margin: 10px;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #sim {
+      position: static;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nicole,quer namorar comigo? ❤️</h1>
+
+  <button id="sim" onclick="responderSim()">Sim 😍</button>
+  <button id="nao" onmouseover="fugir()">Não 😢</button>
+
+  <script>
+    function responderSim() {
+      alert("Eu sabia!!! ❤️😍");
+    }
+
+    function fugir() {
+      let botao = document.getElementById("nao");
+
+      let largura = window.innerWidth - botao.offsetWidth;
+      let altura = window.innerHeight - botao.offsetHeight;
+
+      let x = Math.random() * largura;
+      let y = Math.random() * altura;
+
+      botao.style.left = x + "px";
+      botao.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
